@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -9,9 +9,9 @@ const Header = () => {
           <span className="">UrlShortener</span>
         </div>
 
-        <a href="/history" className='btn text-white fw-bold'>
+        <Link to="/history" className='btn text-white fw-bold'>
           History <i className="bi bi-arrow-right" /> 
-        </a>
+        </Link>
       </div>
     </header>
   )
