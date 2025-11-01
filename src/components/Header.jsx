@@ -9,9 +9,12 @@ const Header = () => {
           <span className="">UrlShortener</span>
         </div>
 
-        <Link to="/history" className='btn text-white fw-bold'>
-          History <i className="bi bi-arrow-right" /> 
-        </Link>
+        <nav className="">
+          <Link to="/" className='btn text-white fw-bold'>Home</Link>
+          <Link to="/history" className='btn text-white fw-bold'>
+            History <i className="bi bi-arrow-right" /> 
+          </Link>
+        </nav>
       </div>
     </header>
   )

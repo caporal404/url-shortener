@@ -3,7 +3,7 @@ import UrlForm from '../components/UrlForm'
 const UrlShortener = () => {
   return (
     <>
-      <h2 className="text-center mb-4 fw-bold text-white">Make your links short, smart and shareable.</h2>
+      <h2 className="text-center mb-5 fw-bold text-white">Make your links short, smart and shareable.</h2>
       <div className='url-shortener p-5 rounded shadow-sm text-white'>
         <UrlForm />
       </div>
