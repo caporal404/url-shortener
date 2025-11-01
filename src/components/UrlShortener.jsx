@@ -3,10 +3,12 @@ import UrlForm from './UrlForm'
 
 const UrlShortener = () => {
   return (
-    <div className='url-shortener px-5 py-4 rounded shadow-sm text-white'>
-      <h2 className="text-center mb-4 fw-bold">Url shortener</h2>
-      <UrlForm />
-    </div>
+    <>
+      <h2 className="text-center mb-4 fw-bold text-white">Make your links short, smart and shareable.</h2>
+      <div className='url-shortener p-5 rounded shadow-sm text-white'>
+        <UrlForm />
+      </div>
+    </>
   )
 }
 

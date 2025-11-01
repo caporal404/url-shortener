@@ -9,11 +9,19 @@
 :root {
   --main-color: #032030;
   --second-color: #022B42;
+  --primary: #0d6efd;
 }
 
 .App {
   background-color: var(--main-color);
 }
+
+header {
+  background-color: var(--second-color);
+}
+
+header a { transition: 200ms; }
+header a:hover { color: var(--primary); }
 
 .url-shortener {
   background-color: var(--second-color);
