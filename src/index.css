@@ -3,4 +3,71 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --main-color: #032030;
+  --second-color: #022B42;
+}
+
+.App {
+  background-color: var(--main-color);
+}
+
+.url-shortener {
+  background-color: var(--second-color);
+  width: min(90%, 700px);
+}
+
+.url-form button {
+  /* width: 15%; */
+  background-color: #000;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.url-form button:hover {
+  background-color: #010f16;
+}
+
+.url-form input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 2px solid #01070a;
+  background-color: #f2efe5;
+  /* color: #000; */
+}
+
+.url-form input:focus {
+  border: 2px solid #01070a;
+  background-color: #f2efe5;
+  box-shadow: 0;
+}
+
+.shortened-url {
+  background-color: var(--main-color);
+}
+
+.url-history {
+  width: min(90%, 700px);
+}
+
+.url-history table tr:nth-child(2n+1) {
+  td {
+    background-color: var(--second-color);
+  }
+}
+
+.url-history table td {
+  background-color: transparent;
+  color: #f2efe5;
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+
+.url-history table th {
+  background-color: #000;
+  padding: 10px 0;
 }
