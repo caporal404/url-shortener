@@ -13,7 +13,7 @@ const ShortenedUrl = () => {
             style={{
               fontSize : "1.1rem"
             }}
-          >Lorem, ipsum dolor.</div>
+          >http://bit.ly/hbi86tfy</div>
         </div>
 
         <button className="btn bg-success px-3 text-white">

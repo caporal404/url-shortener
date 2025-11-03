@@ -61,3 +61,16 @@ header a:hover { color: var(--primary); }
 .url-history {
   width: min(90%, 700px);
 }
+
+
+/* Classes personnalisées */
+
+
+.bg-main { background-color: var(--main-color); }
+.bg-second { background-color: var(--second-color); }
+
+.text-main { color: var(--main-color); }
+.text-second { color: var(--second-color); }
+
+.scale-200 { transform: scale(2); }
+.scale-85 { transform: scale(.85); }

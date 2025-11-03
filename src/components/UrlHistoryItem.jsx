@@ -15,48 +15,46 @@ const UrlHistoryItem = () => {
   return (
     <div className="url-history-item px-3 py-2 rounded bg-light">
       <div className="d-flex justify-content-between align-items-center">
-        <div className="">
-          <div>https://facebook.com</div>
-          <div>http://bit.ly/hbi86tfy</div>
+        <div className="d-flex w-100">
+          <div className="w-50">
+            <div className="fw-bold text-second">Original link:</div>
+            <div className="text-primary">
+              <i className="bi bi-globe text-second me-1" />https://facebook.com
+            </div>
+          </div>
+
+          <div className="">
+            <div className="fw-bold text-second">Shorten link:</div>
+            
+            <div className="text-primary">
+              <i className="bi bi-link-45deg text-main me-1" />http://bit.ly/hbi86tfy
+              <button className="btn p-0 scale-85 ms-3 text-success fw-bold">
+                <i className="bi bi-clipboard" />
+              </button>
+            </div>
+          </div>
         </div>
 
-        <button className="btn p-0"
-          style={{
-            transform: "scale(2)"
-          }}>
+        <button className="btn p-0 text-main scale-200">
           <i className="bi bi-grip-vertical" />
         </button>
       </div>
       
-      <div className="d-flex justify-content-between align-items-center mt-2 pt-1"
-        style={{
-          borderTop : "1px solid #bbb"
-        }}
-      >
-        <div className="fw-bold"
-          style={{
-            color : "#666",
-            transform : "scale(0.85)"
-          }}
-        >
+      <div className="d-flex justify-content-between align-items-center mt-2 pt-1 border-top border-secondary">
+        <div className="text-secondary scale-85">
           <span>
-            <i className="bi bi-clock mx-2"/>
+            <i className="bi bi-clock me-2"/>
             {formattedTime}
           </span>
-          <span className="mx-3">
-            <i className="bi bi-calendar mx-2" />
+          <span className="ms-4">
+            <i className="bi bi-calendar me-2" />
             {formattedDate}
           </span>
         </div>
 
-        <div className="">
-          <button className="btn text-success p-0 mx-3">
-            <i className="bi bi-clipboard" /> Copy
-          </button>
-          <button className="btn text-danger p-0">
-            <i className="bi bi-trash" /> Delete
-          </button>
-        </div>
+        <button className="btn text-danger p-0">
+          <i className="bi bi-trash" /> Delete
+        </button>
       </div>
     </div>
   )
