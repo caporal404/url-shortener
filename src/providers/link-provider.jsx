@@ -20,7 +20,7 @@ const linkProvider = ({ children }) => {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ "long_url": longUrl, "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" })
+      body: JSON.stringify({ "long_url": longUrl })
     });
 
     // Check if the response is corect
