@@ -1,6 +1,4 @@
-import React from 'react'
-
-const ShortenedUrl = () => {
+const ShortenedUrl = ({ state }) => {
   return (
     <div className="shortened-url mt-3 p-3 rounded">
       <div className="d-flex justify-content-between align-items-center">
