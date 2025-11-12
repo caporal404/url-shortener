@@ -1,7 +1,7 @@
 {
   "name": "Url Shortener",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.1.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,7 +17,8 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3",
-    "react-toastify": "^11.0.5"
+    "react-toastify": "^11.0.5",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -8,7 +8,6 @@ const linkProvider = ({ children }) => {
   // Sends a POST request to the Bitly API to shorten a given long URL. 
   const shorten = async (longUrl) => {
     const token = import.meta.env.VITE_BITLY_TOKEN;
-    console.log(token)
     if (!token) {
       throw new Error("Le token Bitly n'est pas défini.");
     }

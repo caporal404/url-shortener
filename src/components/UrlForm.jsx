@@ -6,8 +6,8 @@ import ShortenedUrl from "./ShortenedUrl"
 const UrlForm = () => {
   const { shorten } = useLinks()
   const [longUrl, setLongUrl] = useState("")
-  const [shortenUrl, setShortenUrl] = useState("")
-  const [status, setStatus] = useState("idle") // idle | pending | success
+  const [shortenedUrl, setShortenedUrl] = useState("")
+  const [status, setStatus] = useState("idle") // idle | loading | success
 
   const handleChange = (e) => {
     setLongUrl(e.target.value)
@@ -16,17 +16,17 @@ const UrlForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (longUrl.trim() !== "") 
-      setStatus("pending")
+      setStatus("loading")
     else {
       toast("Link is empty")
     }
   }
 
   useEffect(() => {
-    if (status === "pending") {
+    if (status === "loading") {
       (async () => {
         try {
-          // Displays toast notifications for the request's pending, success, and error states.
+          // Displays toast notifications for the request's loading, success, and error states.
           const response = await toast.promise(
             shorten(longUrl),
             // States for the Toast
@@ -38,11 +38,11 @@ const UrlForm = () => {
           );
 
           setStatus("success")
-          setShortenUrl(response)
+          setShortenedUrl(response)
           console.log(response)
           setLongUrl("") // Clear the input field after shortening
         } catch (error) {
-          console.error("Error shortening URL:", error)
+          console.error("Error shortening URL: ", error)
           setStatus("idle")
         }
       })() // Immediately invoke function
@@ -61,13 +61,13 @@ const UrlForm = () => {
             value={longUrl}
             onChange={handleChange}
             required
-            disabled={status === "pending"}
+            disabled={status === "loading"}
           />
           <button className="btn px-4" type="submit">Shorten</button>
         </div>
       </form>
 
-      <ShortenedUrl />
+      <ShortenedUrl status={status} shortenedUrl={shortenedUrl}/>
     </>
   )
 }
